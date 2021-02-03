@@ -1,12 +1,37 @@
 <html>
-<header>
-    <title>Weather site</title>
-    
-</header>
-<body>
-    <h1 id="temp">temp</h1>
-</body>
-<footer>
-    <script src="weather.js"></script>
-</footer>
+    <header>
+        <link rel="stylesheet" href="design.css">
+        <title>Weather site</title>
+        <h1>Weather website</h1>
+    </header>
+    <body>
+        <div>
+            <p>Choose city:</p>
+            <select id="city">
+                <option value="Viborg">Viborg</option>
+                <option value="Århus">Århus</option>
+                <option value="København">København</option>
+                <option value="Randers">Randers</option>
+                <option value="Silkeborg">Silkeborg</option>
+                <option value="Holstebro">Holstebro</option>
+            </select>
+        </div>
+
+        <button  onclick="Weather(document.getElementById('city').value)">City confirm</button>
+        
+        <table>
+            <tr>
+                <td id="temp">Temp:</td>
+                <td id="temp_min">Temp_min:</td>
+                <td id="temp_max">Temp_max:</td>
+            </tr>
+            <tr><td id="feels">Feels_like:</td>
+                <td id="desc">Description:</td>
+                <td id="speed">Wind_speed:</td>
+            </tr>
+        </table>
+    </body>
+    <footer>
+            <script src="weather.js"></script>
+    </footer>
 </html>
